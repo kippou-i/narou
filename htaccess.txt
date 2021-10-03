@@ -1,0 +1,16 @@
+RewriteEngine On
+
+# index.html無しのURLに統一
+RewriteCond %{THE_REQUEST} ^.*/index.html
+RewriteRule ^(.*)index.html$ https://narou.ykllog.com/$1 [R=301,L]
+
+# httpをhttpsに統一
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R,L]
+
+# ファイル一覧閲覧拒否
+<Files ~ "^\.(htaccess|htpasswd)$">
+deny from all
+</Files>
+Options -Indexes
+order deny,allow
