@@ -21,8 +21,33 @@
   font-size: clamp(1rem, 5.7vw + 1rem, 2rem);
   font-weight: bold;
   color: #18b7cd;
-  -webkit-text-stroke: 1px #ffffff;
-  text-stroke: 1px #ffffff;
+  -webkit-text-stroke: 1px #fff;
+  text-stroke: 1px #fff;
+}
+.h2-title {
+  font-size: 1.5rem;
+  line-height: 3rem;
+  background-color: gray;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.h3-title {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+.h3-title:before {
+  content: "\02666";
+  font-size: 1rem;
+  display: inline-block;
+  color: #18b7cd;
+  position: absolute;
+  top: 50%;
+  left: .25rem;
+  margin-top: -.5rem;
 }
 #cse-search-box {
   display: flex;
@@ -47,13 +72,6 @@ input {
 .ncode-message {
   padding: 0 1rem;
 }
-.span-blue {
-  color: blue;
-  font-size: .8rem;
-}
-.span-red {
-  color: red;
-}
 .footer {
   text-align: center;
 }
@@ -62,9 +80,28 @@ input {
   color: gray;
   margin-bottom: 30px;
 }
+.bread {
+  text-align: left;
+}
 .margin-br {
   margin-bottom: 1rem;
 }
+.margin-2br {
+  margin-bottom: 2rem;
+}
 a:hover {
   color: black;
+}
+.a-gray {
+  color: gray;
+}
+.a-black {
+  color: #333;
+}
+.span-blue {
+  color: blue;
+  font-size: .8rem;
+}
+.span-red {
+  color: red;
 }
