@@ -16,9 +16,6 @@
 .margin-br {
   margin-bottom: 1rem;
 }
-.margin-2br {
-  margin-bottom: 2rem;
-}
 .padding {
   padding: 0 10px;
 }
@@ -116,4 +113,7 @@ input {
 }
 .bread {
   text-align: left;
+}
+.section:not(:last-child) {
+  margin-bottom: 2rem;
 }
