@@ -9,4 +9,4 @@
 HTML/CSS/JavaScript
 
 ## 使用技術・ライブラリ・フレームワーク
-jQuery/Googleカスタム検索/Googleアナリティクス
+jQuery/Googleカスタム検索
