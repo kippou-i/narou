@@ -46,10 +46,10 @@
 
     <main class="main margin-bottom padding">
       <script async src="https://cse.google.com/cse.js?cx=3054ee35f222c31cd"></script>
-      <!-- <div class="gcse-search"></div> -->
+      <!-- <div class="gcse-searchbox-only"></div> -->
 
       <div id="cse-header" class="gcse-searchbox">
-        <form id="cse-search-box" action="https://google.com/cse">
+        <form id="cse-search-box" action="https://google.com/cse" target="_blank">
           <input type="hidden" name="cx" value="3054ee35f222c31cd">
           <input type="hidden" name="ie" value="UTF-8">
           <label for="ncode">作品Ncode</label>
@@ -59,8 +59,8 @@
           <input type="search" id="word" required>
           <label for="negative">検索除外ワード</label>
           <input type="search" id="negative">
-          <input type="hidden" name="q" size="31" id="searchWord" value>
-          <button id="submit" onclick="getValue()">検索</button>
+          <input type="hidden" name="q" id="searchWord" value>
+          <button id="submit">検索</button>
         </form>
         <div class="align-right"><img src="https://www.google.com/cse/images/google_custom_search_smwide.gif"></div>
       </div>
