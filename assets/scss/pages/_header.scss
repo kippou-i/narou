@@ -13,6 +13,10 @@
     img {
       width: 100%;
     }
+
+    @include fo.ss-layout {
+      width: 150px;
+    }
   }
 
   &_hamburger {
@@ -85,14 +89,15 @@
             align-items: center;
             width: 100%;
             height: 40px;
-            border: 1px solid fo.$color-blue02;
+            color: fo.$color-blue01;
+            border: 1px solid fo.$color-blue01;
             border-radius: 20px;
             font-size: fo.rem(18);
             transition: .5s;
 
             @include fo.hover {
-              color: fo.$color-default;
-              background-color: fo.$color-blue03;
+              color: fo.$color-light;
+              background-color: fo.$color-blue01;
               transition: .5s;
             }
           }
@@ -113,8 +118,9 @@
 
       .choice a {
         pointer-events: none;
-        color: fo.$color-default;
-        background-color: fo.$color-blue03;
+        color: fo.$color-light  !important;
+        background-color: fo.$color-default;
+        border: 1px solid fo.$color-default  !important;
       }
     }
 

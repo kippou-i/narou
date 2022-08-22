@@ -9,8 +9,7 @@ $color-default: #192643;
 $color-light: #fff;
 $color-blue01: #18b7cd;
 $color-blue02: #1b8ef3;
-$color-blue03: #64b2f7;
-$color-blue04: #bbdbf3;
+$color-blue03: #bbdbf3;
 $color-accent: #823f1c;
 $color-red: #da532c;
 
@@ -33,6 +32,12 @@ $font-main: 'Noto Sans JP', sans-serif;
 //*------------------*
 
 @mixin sm-layout($width: 768px) {
+  @media screen and (max-width: $width) {
+    @content;
+  }
+}
+
+@mixin ss-layout($width: 400px) {
   @media screen and (max-width: $width) {
     @content;
   }
@@ -90,7 +95,7 @@ a {
   color: $color-blue02;
 
   @include hover {
-    color: $color-blue04;
+    color: $color-blue03;
   }
 }
 
