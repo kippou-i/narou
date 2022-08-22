@@ -1,99 +1,108 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="いと" />
-    <meta name="description" content="小説家になろう掲載作品の本文から全文検索できるサイト。検索時に特定ワードのマイナス検索も可能です。" />
-    <meta name="keywords" content="小説家になろう,なろう,検索,本文検索,全文検索" />
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:site" content="@ykllog" />
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="なろう本文検索" />
-    <meta property="og:title" content="なろう本文検索" />
-    <meta property="og:url" content="https://narou.ykllog.com" />
-    <meta property="og:description" content="小説家になろう掲載作品の本文から全文検索できるサイト。検索時に特定ワードのマイナス検索も可能です。" />
-    <meta property="og:image" content="https://narou.ykllog.com/img/ogp.png" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@2.0.0/destyle.css" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png" />
-    <link rel="manifest" href="/img/favicon/site.webmanifest" />
-    <link rel="mask-icon" href="/img/favicon/safari-pinned-tab.svg" color="#5bbad5" />
-    <meta name="msapplication-TileColor" content="#da532c" />
-    <meta name="theme-color" content="#ffffff" />
-    <title>なろう本文検索&ensp;&raquo;&ensp;小説家になろう掲載作品の本文から全文検索できるサイト</title>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RJZH22JEEY"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
 
-      gtag("config", "G-RJZH22JEEY");
-    </script>
-  </head>
-  <body>
-    <div class="wrapper">
-      <header class="header margin-bottom padding">
-        <h1 class="h1-title">なろう本文検索</h1>
-        <div class="header-inner">
-          <p class="header-message">小説家になろうの作品から全文検索できます。</p>
-          <p class="header-message">作品Ncodeを入力しなければ全体からも検索できます。</p>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="いと">
+  <meta name="description" content="小説家になろう掲載作品の本文から全文検索できるサイト。検索時に特定ワードのマイナス検索も可能です。">
+  <meta name="keywords" content="小説家になろう,なろう,検索,本文検索,全文検索">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@ykllog">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="なろう本文検索">
+  <meta property="og:title" content="なろう本文検索">
+  <meta property="og:url" content="https://narou.ykllog.com">
+  <meta property="og:description" content="小説家になろう掲載作品の本文から全文検索できるサイト。検索時に特定ワードのマイナス検索も可能です。">
+  <meta property="og:image" content="https://narou.ykllog.com/assets/images/ogp.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="./assets/images/favicon/site.webmanifest">
+  <link rel="mask-icon" href="./assets/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/style.min.css">
+
+  <title>なろう本文検索&ensp;&raquo;&ensp;小説家になろう掲載作品の本文から全文検索できるサイト</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RJZH22JEEY"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-RJZH22JEEY");
+  </script>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header margin-bottom padding">
+      <h1 class="h1-title">なろう本文検索</h1>
+      <div class="header-inner">
+        <p class="header-message">小説家になろうの作品から全文検索できます。</p>
+        <p class="header-message">作品Ncodeを入力しなければ全体からも検索できます。</p>
+      </div>
+    </header>
+
+    <main class="main margin-bottom padding">
+      <script async src="https://cse.google.com/cse.js?cx=3054ee35f222c31cd"></script>
+      <!-- <div class="gcse-searchbox-only"></div> -->
+
+      <div id="cse-header" class="gcse-searchbox">
+        <form id="cse-search-box" action="https://google.com/cse" target="_blank">
+          <input type="hidden" name="cx" value="3054ee35f222c31cd">
+          <input type="hidden" name="ie" value="UTF-8">
+          <label for="ncode">作品Ncode</label>
+          <p class="ncode-message">
+            <span class="span-blue">例：n4830bu<br>作品ページのURLでも◎</span>
+          </p>
+          <input type="search" id="ncode">
+          <label for="word">検索ワード<span class="span-red">（必須）</span></label>
+          <input type="search" id="word" required>
+          <label for="negative">検索除外ワード</label>
+          <input type="search" id="negative">
+          <input type="hidden" name="q" id="searchWord" value>
+          <button id="submit">検索</button>
+        </form>
+        <div class="align-right"><img src="https://www.google.com/cse/images/google_custom_search_smwide.gif"></div>
+      </div>
+    </main>
+
+    <aside class="aside margin-bottom padding">
+      <script language="javascript"
+        src="//ad.jp.ap.valuecommerce.com/servlet/jsbanner?sid=3650358&pid=887814029"></script>
+      <noscript>
+        <a href="//ck.jp.ap.valuecommerce.com/servlet/referral?sid=3650358&pid=887814029" rel="nofollow">
+          <img src="//ad.jp.ap.valuecommerce.com/servlet/gifbanner?sid=3650358&pid=887814029" border="0">
+        </a>
+      </noscript>
+    </aside>
+
+    <footer class="footer padding">
+      <div class="footer-inner">
+        <p class="footer-message margin-br">※「小説家になろう」は株式会社ヒナプロジェクトの登録商標です</p>
+        <div class="footer-message grid">
+          <p class="grid-inner"><a href="./privacy.html">プライバシーポリシー</a></p>
+          <p class="grid-inner">運営：いと（<a href="https://twitter.com/ykllog" target="_blank">Twitter</a>）</p>
         </div>
-      </header>
+      </div>
+      <div class="footer-copy">
+        <small class="copyright">&copy; 2021 なろう本文検索.</small>
+      </div>
+    </footer>
+  </div>
 
-      <main class="main margin-bottom padding">
-        <script async src="https://cse.google.com/cse.js?cx=3054ee35f222c31cd"></script>
-        <!-- <div class="gcse-searchbox-only"></div> -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="./assets/js/main.js"></script>
+</body>
 
-        <div id="cse-header" class="gcse-searchbox">
-          <form id="cse-search-box" action="https://google.com/cse" target="_blank">
-            <input type="hidden" name="cx" value="3054ee35f222c31cd" />
-            <input type="hidden" name="ie" value="UTF-8" />
-            <label for="ncode">作品Ncode</label>
-            <p class="ncode-message">
-              <span class="span-blue">例：n4830bu<br />作品ページのURLでも◎</span>
-            </p>
-            <input type="search" id="ncode" />
-            <label for="word">検索ワード<span class="span-red">（必須）</span></label>
-            <input type="search" id="word" required />
-            <label for="negative">検索除外ワード</label>
-            <input type="search" id="negative" />
-            <input type="hidden" name="q" id="searchWord" value />
-            <button id="submit">検索</button>
-          </form>
-          <div class="align-right"><img src="https://www.google.com/cse/images/google_custom_search_smwide.gif" /></div>
-        </div>
-      </main>
-
-      <aside class="aside margin-bottom padding">
-        <script language="javascript" src="//ad.jp.ap.valuecommerce.com/servlet/jsbanner?sid=3650358&pid=887814029"></script>
-        <noscript>
-          <a href="//ck.jp.ap.valuecommerce.com/servlet/referral?sid=3650358&pid=887814029" rel="nofollow">
-            <img src="//ad.jp.ap.valuecommerce.com/servlet/gifbanner?sid=3650358&pid=887814029" border="0" />
-          </a>
-        </noscript>
-      </aside>
-
-      <footer class="footer padding">
-        <div class="footer-inner">
-          <p class="footer-message margin-br">※「小説家になろう」は株式会社ヒナプロジェクトの登録商標です</p>
-          <div class="footer-message grid">
-            <p class="grid-inner"><a href="./privacy.html">プライバシーポリシー</a></p>
-            <p class="grid-inner">運営：いと（<a href="https://twitter.com/ykllog" target="_blank">Twitter</a>）</p>
-          </div>
-        </div>
-        <div class="footer-copy">
-          <small class="copyright">&copy; 2021 なろう本文検索.</small>
-        </div>
-      </footer>
-    </div>
-
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="main.js"></script>
-  </body>
 </html>
