@@ -1,0 +1,27 @@
+@use '../foundation' as fo;
+
+
+//*------------------*
+//*  aside
+//*------------------*
+
+.aside {
+  &_bread {
+    margin-bottom: 1rem;
+
+    ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
+      font-size: fo.rem(12);
+
+      li:not(:last-child) {
+        &:after {
+          content: '>';
+          margin: 0 6px;
+        }
+      }
+    }
+  }
+}
