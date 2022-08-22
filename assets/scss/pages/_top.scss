@@ -1,0 +1,70 @@
+@use '../foundation' as fo;
+
+
+//*------------------*
+//*  top
+//*------------------*
+
+.main {
+  margin-bottom: 5rem;
+
+  &_description {
+    line-height: 1.5;
+    margin-bottom: 3rem;
+  }
+
+  &_box {
+    .ncodeForm {
+      display: flex;
+      flex-direction: column;
+
+      &_inner {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1rem;
+      }
+
+      &_label {
+        margin-bottom: 1rem;
+
+        &_sub {
+          display: inline-block;
+          font-size: fo.rem(14);
+          color: fo.$color-blue01;
+          margin-left: 1rem;
+        }
+      }
+
+      &_input {
+        width: 100%;
+        height: 40px;
+        border: 1px solid fo.$color-default;
+        margin-bottom: 2rem;
+      }
+
+      &_submit {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 40px;
+        color: fo.$color-light;
+        background-color: fo.$color-default;
+        margin-bottom: 1rem;
+        transition: .5s;
+
+        @include fo.hover {
+          color: fo.$color-default;
+          background-color: fo.$color-blue03;
+          transition: .5s;
+        }
+      }
+    }
+
+    img {
+      display: block;
+      width: auto;
+      margin: 0 0 0 auto;
+    }
+  }
+}

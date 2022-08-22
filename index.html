@@ -44,60 +44,76 @@
 </head>
 
 <body>
-  <div class="wrapper">
-    <header class="header margin-bottom padding">
-      <h1 class="h1-title">なろう本文検索</h1>
-      <div class="header-inner">
-        <p class="header-message">小説家になろうの作品から全文検索できます。</p>
-        <p class="header-message">作品Ncodeを入力しなければ全体からも検索できます。</p>
-      </div>
-    </header>
+  <div class="wrapper" ontouchstart="">
+    <div class="wrapper_top">
+      <header class="header wrapper_top_sub">
+        <h1 class="header_title"><img src="./assets/images/title.png" alt="なろう本文検索"></h1>
 
-    <main class="main margin-bottom padding">
-      <script async src="https://cse.google.com/cse.js?cx=3054ee35f222c31cd"></script>
-      <!-- <div class="gcse-searchbox-only"></div> -->
+        <button class="header_hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
 
-      <div id="cse-header" class="gcse-searchbox">
-        <form id="cse-search-box" action="https://google.com/cse" target="_blank">
-          <input type="hidden" name="cx" value="3054ee35f222c31cd">
-          <input type="hidden" name="ie" value="UTF-8">
-          <label for="ncode">作品Ncode</label>
-          <p class="ncode-message">
-            <span class="span-blue">例：n4830bu<br>作品ページのURLでも◎</span>
-          </p>
-          <input type="search" id="ncode">
-          <label for="word">検索ワード<span class="span-red">（必須）</span></label>
-          <input type="search" id="word" required>
-          <label for="negative">検索除外ワード</label>
-          <input type="search" id="negative">
-          <input type="hidden" name="q" id="searchWord" value>
-          <button id="submit">検索</button>
-        </form>
-        <div class="align-right"><img src="https://www.google.com/cse/images/google_custom_search_smwide.gif"></div>
-      </div>
-    </main>
+        <nav class="header_nav">
+          <ul>
+            <li class="choice"><a href="./">本文検索</a></li>
+            <li><a href="./">活動報告検索</a></li>
+            <li><a href="./privacy.html">プライバシーポリシー</a></li>
+            <li>運営：いと（<a href="https://twitter.com/ykllog" target="_blank">Twitter</a>）</li>
+            <li><span class="br">※「小説家になろう」は</span><span class="br">株式会社ヒナプロジェクトの登録商標です</span></li>
+          </ul>
+        </nav>
+      </header>
 
-    <aside class="aside margin-bottom padding">
-      <script language="javascript"
-        src="//ad.jp.ap.valuecommerce.com/servlet/jsbanner?sid=3650358&pid=887814029"></script>
-      <noscript>
-        <a href="//ck.jp.ap.valuecommerce.com/servlet/referral?sid=3650358&pid=887814029" rel="nofollow">
-          <img src="//ad.jp.ap.valuecommerce.com/servlet/gifbanner?sid=3650358&pid=887814029" border="0">
-        </a>
-      </noscript>
-    </aside>
+      <div class="wrapper_top_main">
+        <main class="main">
+          <div class="main_description">
+            <p>小説家になろうの投稿作品から全文検索できます。</p>
+            <p>作品Ncodeを入力することで、特定の作品に絞り込んでの検索が可能です。</p>
+          </div>
 
-    <footer class="footer padding">
-      <div class="footer-inner">
-        <p class="footer-message margin-br">※「小説家になろう」は株式会社ヒナプロジェクトの登録商標です</p>
-        <div class="footer-message grid">
-          <p class="grid-inner"><a href="./privacy.html">プライバシーポリシー</a></p>
-          <p class="grid-inner">運営：いと（<a href="https://twitter.com/ykllog" target="_blank">Twitter</a>）</p>
-        </div>
+          <div class="main_box">
+            <script async src="https://cse.google.com/cse.js?cx=3054ee35f222c31cd"></script>
+            <!-- <div class="gcse-searchbox-only"></div> -->
+
+            <div id="cse-header" class="gcse-searchbox">
+              <form id="cse-search-box" class="ncodeForm" action="https://google.com/cse" target="_blank">
+                <div class="ncodeForm_inner">
+                  <input type="hidden" name="cx" value="3054ee35f222c31cd">
+                  <input type="hidden" name="ie" value="UTF-8">
+                  <label for="ncode" class="ncodeForm_label">作品Ncode<br>
+                    <span class="ncodeForm_label_sub">例：n2230dk<br>作品ページのURLでも◎</span>
+                  </label>
+                  <input type="search" id="ncode" class="ncodeForm_input">
+                  <label for="word" class="ncodeForm_label">検索ワード<span class="colorRed">（必須）</span></label>
+                  <input type="search" id="word" class="ncodeForm_input" required>
+                  <label for="negative" class="ncodeForm_label">検索除外ワード</label>
+                  <input type="search" id="negative" class="ncodeForm_input">
+                  <input type="hidden" name="q" id="searchWord" value>
+                </div>
+                <button id="submit" class="ncodeForm_submit">検索</button>
+              </form>
+              <img src="https://www.google.com/cse/images/google_custom_search_smwide.gif">
+            </div>
+          </div>
+        </main>
+
+        <aside class="aside">
+          <script language="javascript"
+            src="//ad.jp.ap.valuecommerce.com/servlet/jsbanner?sid=3650358&pid=887814029"></script>
+          <noscript>
+            <a href="//ck.jp.ap.valuecommerce.com/servlet/referral?sid=3650358&pid=887814029" rel="nofollow">
+              <img src="//ad.jp.ap.valuecommerce.com/servlet/gifbanner?sid=3650358&pid=887814029" border="0">
+            </a>
+          </noscript>
+        </aside>
+
       </div>
-      <div class="footer-copy">
-        <small class="copyright">&copy; 2021 なろう本文検索.</small>
-      </div>
+    </div>
+
+    <footer class="footer wrapper_under">
+      <small>&copy; 2021 なろう本文検索.</small>
     </footer>
   </div>
 

@@ -1,0 +1,143 @@
+@use '../foundation' as fo;
+
+
+//*------------------*
+//*  header
+//*------------------*
+
+.header {
+  &_title {
+    width: 280px;
+    margin: 0 auto 3rem;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &_hamburger {
+    display: none;
+
+    @include fo.sm-layout {
+      display: block;
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      width: 40px;
+      z-index: 10;
+
+      span {
+        display: block;
+        background-color: fo.$color-accent;
+        width: 100%;
+        height: 3px;
+        position: absolute;
+        left: 0;
+
+        &:nth-child(1) {
+          top: 0;
+        }
+
+        &:nth-child(2) {
+          top: 12px;
+        }
+
+        &:nth-child(3) {
+          top: 24px;
+        }
+      }
+
+      &.open {
+        span {
+          &:nth-child(1) {
+            top: 10px;
+            transform: rotate(45deg);
+          }
+
+          &:nth-child(2) {
+            width: 0;
+          }
+
+          &:nth-child(3) {
+            top: 10px;
+            transform: rotate(-45deg);
+          }
+        }
+      }
+    }
+  }
+
+  &_nav {
+    ul {
+      li {
+        width: 100%;
+        text-align: center;
+        line-height: 2;
+        font-size: fo.rem(14);
+
+        &:not(:nth-last-child(-n+3)) {
+          margin-bottom: 1rem;
+
+          a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 40px;
+            border: 1px solid fo.$color-blue02;
+            border-radius: 20px;
+            font-size: fo.rem(18);
+            transition: .5s;
+
+            @include fo.hover {
+              color: fo.$color-default;
+              background-color: fo.$color-blue03;
+              transition: .5s;
+            }
+          }
+        }
+
+        &:nth-last-child(4) {
+          margin-bottom: 5rem;
+        }
+
+        &:nth-last-child(2) {
+          margin-bottom: 2rem;
+        }
+
+        &:nth-last-child(1) {
+          font-size: fo.rem(10);
+        }
+      }
+
+      .choice a {
+        pointer-events: none;
+        color: fo.$color-default;
+        background-color: fo.$color-blue03;
+      }
+    }
+
+    @include fo.sm-layout {
+      display: none;
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: fo.$color-light;
+        padding: 5rem 5%;
+        z-index: 5;
+      }
+
+      &.open {
+        display: block;
+      }
+    }
+  }
+}
