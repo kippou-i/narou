@@ -33,7 +33,7 @@
 
       span {
         display: block;
-        background-color: fo.$color-accent;
+        background-color: fo.$color-blue01;
         width: 100%;
         height: 3px;
         position: absolute;
@@ -88,17 +88,24 @@
             justify-content: center;
             align-items: center;
             width: 100%;
-            height: 40px;
+            height: 50px;
             color: fo.$color-blue01;
-            border: 1px solid fo.$color-blue01;
-            border-radius: 20px;
+            border-width: 1px 0 1px 1px;
+            border-style: solid;
+            border-color: fo.$color-blue01;
             font-size: fo.rem(18);
             transition: .5s;
 
             @include fo.hover {
               color: fo.$color-light;
-              background-color: fo.$color-blue01;
+              background-color: fo.$color-blue02;
               transition: .5s;
+            }
+
+            @include fo.sm-layout {
+              height: 40px;
+              border-radius: 20px;
+              border-width: 1px 1px 1px 1px;
             }
           }
         }
@@ -119,8 +126,7 @@
       .choice a {
         pointer-events: none;
         color: fo.$color-light  !important;
-        background-color: fo.$color-default;
-        border: 1px solid fo.$color-default  !important;
+        background-color: fo.$color-blue01;
       }
     }
 
