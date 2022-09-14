@@ -5,12 +5,32 @@
 //*  color定義
 //*------------------*
 
-$color-default: #192643;
-$color-light: #fff;
-$color-blue01: #18b7cd;
-$color-blue02: #1b8ef3;
-$color-blue03: #bbdbf3;
-$color-red: #da532c;
+:root {
+  @media (prefers-color-scheme: light) {
+    --color-default: #192643;
+    --color-light: #fff;
+    --color-blue01: #18b7cd;
+    --color-blue02: #1b8ef3;
+    --color-blue03: #bbdbf3;
+    --color-red: #da532c;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    --color-default: #fff;
+    --color-light: #192643;
+    --color-blue01: #18b7cd;
+    --color-blue02: #1b8ef3;
+    --color-blue03: #bbdbf3;
+    --color-red: #da532c;
+  }
+}
+
+$color-default: var(--color-default);
+$color-light: var(--color-light);
+$color-blue01: var(--color-blue01);
+$color-blue02: var(--color-blue02);
+$color-blue03: var(--color-blue03);
+$color-red: var(--color-red);
 
 
 //*------------------*
@@ -70,6 +90,7 @@ body {
   overflow-wrap: break-word;
   word-wrap: break-word;
   box-sizing: border-box;
+  transition: .5s;
 }
 
 img {
