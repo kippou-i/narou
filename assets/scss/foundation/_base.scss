@@ -6,23 +6,21 @@
 //*------------------*
 
 :root {
-  @media (prefers-color-scheme: light) {
-    --color-default: #192643;
-    --color-light: #fff;
-    --color-blue01: #18b7cd;
-    --color-blue02: #1b8ef3;
-    --color-blue03: #bbdbf3;
-    --color-red: #da532c;
-  }
+  --color-default: #192643;
+  --color-light: #fff;
+  --color-blue01: #18b7cd;
+  --color-blue02: #1b8ef3;
+  --color-blue03: #bbdbf3;
+  --color-red: #da532c;
+}
 
-  @media (prefers-color-scheme: dark) {
-    --color-default: #fff;
-    --color-light: #192643;
-    --color-blue01: #18b7cd;
-    --color-blue02: #1b8ef3;
-    --color-blue03: #bbdbf3;
-    --color-red: #da532c;
-  }
+:root.darkmode {
+  --color-default: #fff;
+  --color-light: #192643;
+  --color-blue01: #18b7cd;
+  --color-blue02: #1b8ef3;
+  --color-blue03: #bbdbf3;
+  --color-red: #da532c;
 }
 
 $color-default: var(--color-default);
@@ -73,6 +71,16 @@ $font-main: 'Noto Sans JP', sans-serif;
     &:active {
       @content;
     }
+  }
+}
+
+@mixin dark {
+  @media (prefers-color-scheme: dark) {
+    @content;
+  }
+
+  &.darkmode {
+    @content;
   }
 }
 

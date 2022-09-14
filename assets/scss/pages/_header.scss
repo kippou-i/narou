@@ -21,58 +21,50 @@
 
   &_hamburger {
     display: none;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    height: 28px;
+    z-index: 10;
 
     @include fo.sm-layout {
       display: block;
-      position: fixed;
-      top: 10px;
-      right: 10px;
-      width: 40px;
-      height: 28px;
-      z-index: 10;
+    }
 
-      span {
-        display: block;
-        background-color: fo.$color-blue01;
-        width: 100%;
-        height: 3px;
-        position: absolute;
-        left: 0;
+    span {
+      display: block;
+      background-color: fo.$color-blue01;
+      width: 100%;
+      height: 3px;
+      position: absolute;
+      left: 0;
 
-        &:nth-child(1) {
-          top: 0;
-        }
-
-        &:nth-child(2) {
-          top: 12px;
-        }
-
-        &:nth-child(3) {
-          top: 24px;
-        }
+      &:nth-child(1) {
+        top: 0;
       }
 
-      &.open {
-        span {
-          &:nth-child(1) {
-            top: 10px;
-            transform: rotate(45deg);
-          }
-
-          &:nth-child(2) {
-            width: 0;
-          }
-
-          &:nth-child(3) {
-            top: 10px;
-            transform: rotate(-45deg);
-          }
-        }
+      &:nth-child(2) {
+        top: 12px;
       }
+
+      &:nth-child(3) {
+        top: 24px;
+      }
+    }
+
+    @include fo.sm-layout {
+      display: block;
     }
   }
 
   &_nav {
+    margin-bottom: 2rem;
+
+    @include fo.sm-layout {
+      display: none;
+    }
+
     ul {
       li {
         width: 100%;
@@ -111,7 +103,7 @@
         }
 
         &:nth-last-child(4) {
-          margin-bottom: 5rem;
+          margin-bottom: 4rem;
         }
 
         &:nth-last-child(2) {
@@ -129,28 +121,39 @@
         background-color: fo.$color-blue01;
       }
     }
+  }
 
-    @include fo.sm-layout {
-      display: none;
+  &.open {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: fo.$color-light;
+    padding: 5rem 5%;
+    z-index: 5;
+    overflow: auto;
 
-      ul {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        align-items: center;
-        width: 100%;
-        height: 100vh;
-        position: fixed;
-        top: 0;
-        left: 0;
-        background-color: fo.$color-light;
-        padding: 5rem 5%;
-        z-index: 5;
+    .header_hamburger {
+      span {
+        &:nth-child(1) {
+          top: 10px;
+          transform: rotate(45deg);
+        }
+
+        &:nth-child(2) {
+          width: 0;
+        }
+
+        &:nth-child(3) {
+          top: 10px;
+          transform: rotate(-45deg);
+        }
       }
+    }
 
-      &.open {
-        display: block;
-      }
+    .header_nav {
+      display: block;
     }
   }
 }
