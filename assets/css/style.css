@@ -398,15 +398,37 @@ th {
   font-weight: bold;
 }
 
+@media (prefers-color-scheme: light) {
+  :root {
+    --color-default: #192643;
+    --color-light: #fff;
+    --color-blue01: #18b7cd;
+    --color-blue02: #1b8ef3;
+    --color-blue03: #bbdbf3;
+    --color-red: #da532c;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-default: #fff;
+    --color-light: #192643;
+    --color-blue01: #18b7cd;
+    --color-blue02: #1b8ef3;
+    --color-blue03: #bbdbf3;
+    --color-red: #da532c;
+  }
+}
+
 body {
   font-size: 1rem;
   font-family: "Noto Sans JP", sans-serif;
-  color: #192643;
-  background-color: #fff;
+  color: var(--color-default);
+  background-color: var(--color-light);
   line-height: 1;
   overflow-wrap: break-word;
   word-wrap: break-word;
   box-sizing: border-box;
+  transition: 0.5s;
 }
 
 img {
@@ -428,16 +450,16 @@ textarea::-webkit-outer-spin-button {
 }
 
 a {
-  color: #1b8ef3;
+  color: var(--color-blue02);
 }
 @media (hover: hover) {
   a:hover {
-    color: #bbdbf3;
+    color: var(--color-blue03);
   }
 }
 @media (hover: none) {
   a:active {
-    color: #bbdbf3;
+    color: var(--color-blue03);
   }
 }
 
@@ -454,7 +476,7 @@ dt {
 }
 
 .colorRed {
-  color: #da532c;
+  color: var(--color-red);
 }
 
 .wrapper {
@@ -479,7 +501,7 @@ dt {
   height: calc(100vh - 4rem);
   margin-right: 20px;
   position: fixed;
-  border-right: 2px solid #18b7cd;
+  border-right: 2px solid var(--color-blue01);
 }
 @media screen and (max-width: 768px) {
   .wrapper_top_sub {
@@ -514,7 +536,7 @@ dt {
   left: 0;
   right: 0;
   margin: 0 auto;
-  background-color: #fff;
+  background-color: var(--color-light);
 }
 @media screen and (max-width: 768px) {
   .wrapper_under {
@@ -549,7 +571,7 @@ dt {
   }
   .header_hamburger span {
     display: block;
-    background-color: #18b7cd;
+    background-color: var(--color-blue01);
     width: 100%;
     height: 3px;
     position: absolute;
@@ -591,24 +613,24 @@ dt {
   align-items: center;
   width: 100%;
   height: 50px;
-  color: #18b7cd;
+  color: var(--color-blue01);
   border-width: 1px 0 1px 1px;
   border-style: solid;
-  border-color: #18b7cd;
+  border-color: var(--color-blue01);
   font-size: 1.125rem;
   transition: 0.5s;
 }
 @media (hover: hover) {
   .header_nav ul li:not(:nth-last-child(-n+3)) a:hover {
-    color: #fff;
-    background-color: #1b8ef3;
+    color: var(--color-light);
+    background-color: var(--color-blue02);
     transition: 0.5s;
   }
 }
 @media (hover: none) {
   .header_nav ul li:not(:nth-last-child(-n+3)) a:active {
-    color: #fff;
-    background-color: #1b8ef3;
+    color: var(--color-light);
+    background-color: var(--color-blue02);
     transition: 0.5s;
   }
 }
@@ -630,8 +652,8 @@ dt {
 }
 .header_nav ul .choice a {
   pointer-events: none;
-  color: #fff !important;
-  background-color: #18b7cd;
+  color: var(--color-light) !important;
+  background-color: var(--color-blue01);
 }
 @media screen and (max-width: 768px) {
   .header_nav {
@@ -647,7 +669,7 @@ dt {
     position: fixed;
     top: 0;
     left: 0;
-    background-color: #fff;
+    background-color: var(--color-light);
     padding: 5rem 5%;
     z-index: 5;
   }
@@ -696,13 +718,13 @@ dt {
 .topMain_box .ncodeForm_label_sub {
   display: inline-block;
   font-size: 0.875rem;
-  color: #18b7cd;
+  color: var(--color-blue01);
   margin-left: 1rem;
 }
 .topMain_box .ncodeForm_input {
   width: 100%;
   height: 40px;
-  border: 1px solid #192643;
+  border: 1px solid var(--color-default);
   margin-bottom: 2rem;
 }
 .topMain_box .ncodeForm_submit {
@@ -711,20 +733,20 @@ dt {
   align-items: center;
   width: 100%;
   height: 40px;
-  color: #fff;
-  background-color: #192643;
+  color: var(--color-light);
+  background-color: var(--color-default);
   margin-bottom: 1rem;
   transition: 0.5s;
 }
 @media (hover: hover) {
   .topMain_box .ncodeForm_submit:hover {
-    background-color: #18b7cd;
+    background-color: var(--color-blue01);
     transition: 0.5s;
   }
 }
 @media (hover: none) {
   .topMain_box .ncodeForm_submit:active {
-    background-color: #18b7cd;
+    background-color: var(--color-blue01);
     transition: 0.5s;
   }
 }
@@ -732,6 +754,12 @@ dt {
   display: block;
   width: auto;
   margin: 0 0 0 auto;
+}
+@media (prefers-color-scheme: dark) {
+  .topMain_box img {
+    padding: 3px 5px;
+    background-color: #fff;
+  }
 }
 
 .privacyMain {
@@ -754,7 +782,7 @@ dt {
   content: "";
   width: 100%;
   height: 1px;
-  background-color: #18b7cd;
+  background-color: var(--color-blue01);
   position: absolute;
   top: 50%;
   right: 0;
@@ -763,6 +791,6 @@ dt {
 }
 .privacyMain_content dt h3 {
   display: inline-block;
-  background-color: #fff;
+  background-color: var(--color-light);
   padding-right: 1rem;
 }
