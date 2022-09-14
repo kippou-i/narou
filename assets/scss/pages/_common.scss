@@ -19,6 +19,7 @@
 
     @include fo.sm-layout {
       display: block;
+      padding-top: 0;
     }
 
     &_sub {
@@ -31,8 +32,8 @@
       @include fo.sm-layout {
         width: 100%;
         height: auto;
-        margin-top: 3rem;
         margin-right: 0;
+        padding-top: 3rem;
         position: static;
         border-right: none;
       }
