@@ -542,6 +542,12 @@ dt {
   }
 }
 
+@media screen and (max-width: 768px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+  }
+}
 .header_title {
   width: 280px;
   margin: 0 auto 3rem;
@@ -596,6 +602,8 @@ dt {
 @media screen and (max-width: 768px) {
   .header_nav {
     display: none;
+    order: 1;
+    margin-bottom: 0;
   }
 }
 .header_nav ul li {
@@ -642,7 +650,7 @@ dt {
   }
 }
 .header_nav ul li:nth-last-child(4) {
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
 }
 .header_nav ul li:nth-last-child(2) {
   margin-bottom: 2rem;
@@ -715,6 +723,7 @@ dt {
 @media screen and (max-width: 768px) {
   .darkSwitch {
     display: none;
+    margin-bottom: 3rem;
   }
 }
 .darkSwitch_text {

@@ -6,6 +6,11 @@
 //*------------------*
 
 .header {
+  @include fo.sm-layout {
+    display: flex;
+    flex-direction: column;
+  }
+
   &_title {
     width: 280px;
     margin: 0 auto 3rem;
@@ -63,6 +68,8 @@
 
     @include fo.sm-layout {
       display: none;
+      order: 1;
+      margin-bottom: 0;
     }
 
     ul {
@@ -103,7 +110,7 @@
         }
 
         &:nth-last-child(4) {
-          margin-bottom: 4rem;
+          margin-bottom: 3rem;
         }
 
         &:nth-last-child(2) {
