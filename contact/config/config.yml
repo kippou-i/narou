@@ -1,0 +1,5 @@
+config:
+    email: info@ykllog.com
+    subject: ［なろう本文検索］お問い合わせ
+    auto_reply_subject: ［なろう本文検索］お問い合わせありがとうございます
+    auto_reply_name: なろう本文検索

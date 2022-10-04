@@ -120,6 +120,39 @@
         &:nth-last-child(1) {
           font-size: fo.rem(10);
         }
+
+        .contactMenu {
+          svg {
+            width: 1rem;
+            height: 1rem;
+            object-fit: contain;
+            vertical-align: middle;
+          }
+
+          &_twitter {
+            margin-left: 1rem;
+
+            svg {
+              fill: fo.$color-default;
+
+              @include fo.hover {
+                fill: fo.$color-blue01;
+              }
+            }
+          }
+
+          &_mail {
+            margin-left: 0.5rem;
+
+            svg {
+              fill: fo.$color-default;
+
+              @include fo.hover {
+                fill: fo.$color-red;
+              }
+            }
+          }
+        }
       }
 
       .choice a {
