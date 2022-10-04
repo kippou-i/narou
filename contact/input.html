@@ -1,0 +1,53 @@
+{include:header.html}
+<h2 class="contactMain_title">お問い合わせ</h2>
+<div class="contactMain_description">
+	<p>全項目入力必須です。</p>
+	<p>お問い合わせのお返事は、基本的に１週間以内に行っております。</p>
+</div>
+
+<form method="post" action="./#contact" enctype="multipart/form-data" class="contactMain_form">
+	<input type="hidden" name="csrf_token" value="{$csrf_token}">
+	<ul class="contactMain_form_inner">
+		<li class="contactMain_form_item">
+			<label for="name" class="contactMain_form_label">お名前</label>
+			<input type="text" id="name" class="contactMain_form_input" name="お名前" value="{$お名前}">
+			<input type="hidden" name="required[]" value="お名前">
+			{if:$required.お名前}
+			<p class="contactMain_form_error">{$required.お名前}</p>
+			{/if:$required.お名前}
+		</li>
+		<li class="contactMain_form_item">
+			<label for="mail" class="contactMain_form_label">メールアドレス</label>
+			<input type="text" id="mail" class="contactMain_form_input" name="メールアドレス" value="{$メールアドレス}">
+			<input type="hidden" name="required[]" value="メールアドレス">
+			{if:$required.メールアドレス}
+			<p class="contactMain_form_error">{$required.メールアドレス}</p>
+			{/if:$required.メールアドレス}
+			<input type="hidden" name="email[]" value="メールアドレス">
+			{if:$email.メールアドレス}
+			<p class="contactMain_form_error">{$email.メールアドレス}</p>
+			{/if:$email.メールアドレス}
+		</li>
+		<li class="contactMain_form_item">
+			<label for="message" class="contactMain_form_label">お問い合わせ内容</label>
+			<textarea id="message" class="contactMain_form_textarea" name="お問い合わせ内容">{$お問い合わせ内容}</textarea>
+			<input type="hidden" name="required[]" value="お問い合わせ内容">
+			{if:$required.お問い合わせ内容}
+			<p class="contactMain_form_error">{$required.お問い合わせ内容}</p>
+			{/if:$required.お問い合わせ内容}
+		</li>
+	</ul>
+	<input type="submit" class="contactMain_form_submit" value="入力内容を確認する">
+</form>
+
+</main>
+
+<aside class="aside">
+	<nav class="aside_bread">
+		<ul>
+			<li><a href="../">HOME</a></li>
+			<li>お問い合わせ</li>
+		</ul>
+	</nav>
+
+	{include:footer.html}

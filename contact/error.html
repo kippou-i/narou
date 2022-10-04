@@ -1,0 +1,25 @@
+{include:header.html}
+<h2 class="contactMain_title">エラーが発生しました</h2>
+<p class="contactMain_description">お手数をおかけしますが、再度、お問い合わせフォームからお問い合わせいただくか、<a href="https://twitter.com/ykllog"
+		target="_blank" rel="noopener noreferrer">Twitter（@ykllog）のDM</a>よりお問い合わせください。</p>
+
+{if:$global_errors}
+<ul>
+	{loop:$global_errors}
+	<li>{$global_errors[]}</li>
+	{/loop:$global_errors}
+</ul>
+{/if:$global_errors}
+
+</main>
+
+<aside class="aside">
+	<nav class="aside_bread">
+		<ul>
+			<li><a href="../">HOME</a></li>
+			<li><a href="index.php">お問い合わせ</a></li>
+			<li>エラーが発生しました</li>
+		</ul>
+	</nav>
+
+	{include:footer.html}
