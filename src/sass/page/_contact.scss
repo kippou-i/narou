@@ -1,0 +1,45 @@
+@use '../global' as g;
+
+.wp-block-contact-form-7-contact-form-selector {
+  p {
+    margin-bottom: 2rem;
+  }
+
+  label {
+    display: inline-block;
+    margin-bottom: .5rem;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    padding: 0.5em;
+    border: 1px solid g.cl(bk);
+  }
+
+  input {
+    height: 40px;
+  }
+
+  textarea {
+    height: 100px;
+    resize: vertical;
+  }
+
+  .wpcf7-submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    color: g.cl(wh);
+    background-color: g.cl(bk);
+    margin-bottom: 1rem;
+    transition: .5s;
+
+    @include g.hover-active {
+      background-color: g.cl(bl01);
+      transition: .5s;
+    }
+  }
+}

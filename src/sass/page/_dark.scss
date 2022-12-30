@@ -1,0 +1,100 @@
+@use '../global' as g;
+
+.darkSwitch {
+  display: flex;
+  align-items: center;
+  font-family: Trebuchet, Arial, sans-serif;
+  font-weight: bold;
+  width: fit-content;
+  margin: 0 auto;
+
+  @include g.mq-down(sp) {
+    display: none;
+    margin-bottom: 3rem;
+  }
+
+  &_text {
+    text-transform: capitalize;
+    margin-right: 20px;
+  }
+
+  &_inner {
+    position: relative;
+    width: 90px;
+  }
+
+  &_checkbox {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  &_label {
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+    border: 2px solid g.cl(bk);
+    border-radius: 11px;
+
+    &_inner {
+      display: block;
+      width: 200%;
+      margin-left: -100%;
+      transition: margin 0.3s ease-in 0s;
+
+      &:before,
+      &:after {
+        display: block;
+        float: left;
+        width: 50%;
+        height: 30px;
+        padding: 0;
+        line-height: 30px;
+        box-sizing: border-box;
+        background-color: g.cl(wh);
+        color: g.cl(bk);
+      }
+
+      &:before {
+        content: "ON";
+        padding-left: 10px;
+      }
+
+      &:after {
+        content: "OFF";
+        padding-right: 10px;
+        text-align: right;
+      }
+    }
+
+    &_switch {
+      display: block;
+      width: 20px;
+      margin: 7px;
+      background: g.cl(wh);
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 55px;
+      border: 2px solid g.cl(bk);
+      border-radius: 11px;
+      transition: all 0.3s ease-in 0s;
+
+      @include g.dark {
+        background: #fff;
+      }
+    }
+  }
+
+  &_checkbox:checked + &_label &_label_inner {
+    margin-left: 0;
+  }
+
+  &_checkbox:checked + &_label &_label_switch {
+    right: 0px;
+  }
+}
+
+.header.open .darkSwitch {
+  display: flex;
+}

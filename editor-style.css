@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+.has-red-color {
+  color: #f00;
+  font-weight: 500;
+}
+
+em {
+  text-decoration: underline;
+  font-style: normal;
+}

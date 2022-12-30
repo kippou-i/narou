@@ -1,0 +1,49 @@
+@use 'sass:math';
+
+$breakpoints: (
+  sp: 767,
+  tab: 1024,
+  ) !default;
+
+:root {
+  --color-black: #192643;
+  --color-white: #fff;
+  --color-blue01: #18b7cd;
+  --color-blue02: #1b8ef3;
+  --color-blue03: #bbdbf3;
+  --color-red: #da532c;
+}
+
+:root.darkmode {
+  --color-black: #fff;
+  --color-white: #192643;
+  --color-blue01: #18b7cd;
+  --color-blue02: #1b8ef3;
+  --color-blue03: #bbdbf3;
+  --color-red: #da532c;
+}
+
+$color-black: var(--color-black
+);
+$color-white: var(--color-white);
+$color-blue01: var(--color-blue01);
+$color-blue02: var(--color-blue02);
+$color-blue03: var(--color-blue03);
+$color-red: var(--color-red);
+
+$cl: (
+  bk:$color-black,
+  wh:$color-white,
+  bl01:$color-blue01,
+  bl02:$color-blue02,
+  bl03:$color-blue03,
+  rd:$color-red,
+  ) !default;
+
+$fw-regular: 400;
+$fw-bold: 900;
+
+$fw: (
+  r: $fw-regular,
+  b: $fw-bold,
+  ) !default;

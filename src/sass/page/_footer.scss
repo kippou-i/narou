@@ -1,0 +1,7 @@
+@use '../global' as g;
+
+.footer {
+  @include g.fz(14);
+  text-align: center;
+  padding: 1rem 0;
+}
