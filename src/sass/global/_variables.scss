@@ -10,7 +10,8 @@ $breakpoints: (
   --color-white: #fff;
   --color-blue01: #18b7cd;
   --color-blue02: #1b8ef3;
-  --color-blue03: #bbdbf3;
+  --color-blue03: #D6FAFF;
+  --color-gray: #929EB9;
   --color-red: #da532c;
 }
 
@@ -19,7 +20,8 @@ $breakpoints: (
   --color-white: #192643;
   --color-blue01: #18b7cd;
   --color-blue02: #1b8ef3;
-  --color-blue03: #bbdbf3;
+  --color-blue03: #D6FAFF;
+  --color-gray: #929EB9;
   --color-red: #da532c;
 }
 
@@ -29,6 +31,7 @@ $color-white: var(--color-white);
 $color-blue01: var(--color-blue01);
 $color-blue02: var(--color-blue02);
 $color-blue03: var(--color-blue03);
+$color-gray: var(--color-gray);
 $color-red: var(--color-red);
 
 $cl: (
@@ -37,6 +40,7 @@ $cl: (
   bl01:$color-blue01,
   bl02:$color-blue02,
   bl03:$color-blue03,
+  gr:$color-gray,
   rd:$color-red,
   ) !default;
 

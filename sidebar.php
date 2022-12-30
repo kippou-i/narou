@@ -1,5 +1,5 @@
 <aside class="aside">
-  <nav class="aside_bread">
+  <nav class="aside__bread">
     <ul>
       <?php if (is_home()) : ?>
         <li></li>
@@ -30,7 +30,7 @@
     </ul>
   </nav>
 
-  <div class="aside_pr">
+  <div class="aside__pr">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3799116642278714" crossorigin="anonymous"></script>
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3799116642278714" data-ad-slot="7945385425" data-ad-format="auto" data-full-width-responsive="true"></ins>
     <script>

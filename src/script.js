@@ -1,12 +1,12 @@
 //*------------------*
-//*  DarkMode
+//*  ダークモード
 //*------------------*
 
 // OSの設定がダークモード
 const osDark = window.matchMedia("(prefers-color-scheme: dark)");
 
 // スイッチのinput要素（checkbox）
-const modeSwitch = document.getElementById("darkSwitch_btn");
+const modeSwitch = document.getElementById("dark-switch__btn");
 
 // スイッチの操作に応じて切り替え処理
 modeSwitch.addEventListener("change", () => {
@@ -54,19 +54,7 @@ if (sessionStorage.getItem("darkMode") === "on") {
 
 
 //*------------------*
-//*  hamburger
-//*------------------*
-
-jQuery(function ($) {
-  $('.header_hamburger').on('click', function () {
-    $('.header').toggleClass('open');
-    $('body').toggleClass('noScroll');
-  });
-});
-
-
-//*------------------*
-//*  ncodeForm
+//*  サーチフォーム
 //*------------------*
 
 jQuery(function ($) {

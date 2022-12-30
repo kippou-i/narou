@@ -4,9 +4,25 @@
   line-height: 1.5;
 
   &__title {
-    font-size: 28px;
-    font-weight: bold;
-    margin-bottom: 5rem;
+    color: g.cl(bl01);
+    @include g.fz(28);
+    @include g.ls(100);
+    font-weight: g.fw(b);
+    margin-bottom: 3rem;
+
+    &--none {
+      @include g.mq-down(sp) {
+        display: none;
+      }
+    }
+
+    @include g.mq-down(sp) {
+      @include g.fz(24);
+    }
+  }
+
+  &__lead {
+    margin-bottom: 3rem;
   }
 
   &__content {
@@ -14,7 +30,9 @@
       margin-bottom: 1rem;
       padding-right: 1rem;
       padding-bottom: .5rem;
-      font-weight: bold;
+      @include g.fz(20);
+      @include g.ls(100);
+      font-weight: g.fw(b);
       border-bottom: 1px solid;
       border-image: linear-gradient(to right, g.cl(bl01) 0%, transparent 80%, transparent 100%);
       border-image-slice: 1;

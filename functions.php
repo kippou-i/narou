@@ -30,6 +30,9 @@ add_action('wp_enqueue_scripts', 'my_theme_scripts');
 //ツールバー非表示
 add_filter('show_admin_bar', '__return_false');
 
+//ナビゲーションメニュー設定
+require get_template_directory() . '/inc/navigation-menu.php';
+
 //投稿画面カラーパレット設定
 require get_template_directory() . '/inc/color-palette.php';
 

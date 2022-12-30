@@ -1,6 +1,6 @@
 @use '../global' as g;
 
-.darkSwitch {
+.dark-switch {
   display: flex;
   align-items: center;
   font-family: Trebuchet, Arial, sans-serif;
@@ -9,34 +9,38 @@
   margin: 0 auto;
 
   @include g.mq-down(sp) {
-    display: none;
-    margin-bottom: 3rem;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 3;
   }
 
-  &_text {
+  &__text {
     text-transform: capitalize;
     margin-right: 20px;
   }
 
-  &_inner {
+  &__inner {
     position: relative;
     width: 90px;
   }
 
-  &_checkbox {
+  &__checkbox {
     position: absolute;
     opacity: 0;
     pointer-events: none;
   }
 
-  &_label {
+  &__label {
     display: block;
     overflow: hidden;
     cursor: pointer;
     border: 2px solid g.cl(bk);
     border-radius: 11px;
 
-    &_inner {
+    &__inner {
       display: block;
       width: 200%;
       margin-left: -100%;
@@ -67,7 +71,7 @@
       }
     }
 
-    &_switch {
+    &__switch {
       display: block;
       width: 20px;
       margin: 7px;
@@ -86,15 +90,11 @@
     }
   }
 
-  &_checkbox:checked + &_label &_label_inner {
+  &__checkbox:checked + &__label &__label__inner {
     margin-left: 0;
   }
 
-  &_checkbox:checked + &_label &_label_switch {
+  &__checkbox:checked + &__label &__label__switch {
     right: 0px;
   }
-}
-
-.header.open .darkSwitch {
-  display: flex;
 }

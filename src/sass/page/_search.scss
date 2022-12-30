@@ -1,16 +1,22 @@
 @use '../global' as g;
 
-.wp-block-contact-form-7-contact-form-selector {
-  p {
-    margin-bottom: 2rem;
+.search-form {
+  display: flex;
+  flex-direction: column;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
   }
 
-  label {
+  &__label {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     @include g.fz(20);
     font-weight: g.fw(b);
-    margin-bottom: -0.5rem;
+    margin-bottom: 1rem;
 
     &::before {
       content: '';
@@ -21,7 +27,14 @@
       margin-right: 10px;
     }
 
-    .required {
+    &__sub {
+      @include g.fz(14);
+      color: g.cl(gr);
+      font-weight: g.fw(r);
+      margin-left: 1rem;
+    }
+
+    &__required {
       color: #fff;
       @include g.fz(14);
       background-color: g.cl(rd);
@@ -31,24 +44,16 @@
     }
   }
 
-  input,
-  textarea {
+  &__input {
     width: 100%;
-    padding: 0.5em;
+    height: 40px;
     border: 1px solid g.cl(bk);
     border-radius: 5px;
+    margin-bottom: 2rem;
+    padding: 0.5em;
   }
 
-  input {
-    height: 40px;
-  }
-
-  textarea {
-    height: 100px;
-    resize: vertical;
-  }
-
-  .wpcf7-submit {
+  &__submit {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -59,12 +64,19 @@
     @include g.ls(100);
     background-color: g.cl(bk);
     border-radius: 25px;
-    margin: 0 auto;
+    margin: 0 auto 1rem;
     transition: .5s;
 
     @include g.hover-active {
-      border-color: g.cl(bl01);
       background-color: g.cl(bl01);
     }
+  }
+
+  img {
+    display: block;
+    width: auto;
+    margin: 0 auto;
+    padding: 3px 5px;
+    background-color: #fff;
   }
 }

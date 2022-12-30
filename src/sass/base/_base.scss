@@ -3,6 +3,7 @@
 
 body {
   color: g.cl(bk);
+  @include g.fz(16);
   background-color: g.cl(wh);
   font-family: 'Noto Sans JP', sans-serif;
 }
@@ -31,8 +32,4 @@ a {
 
 .br {
   display: inline-block;
-}
-
-.colorRed {
-  color: g.cl(rd);
 }
