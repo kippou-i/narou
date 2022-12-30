@@ -45,5 +45,5 @@ require get_template_directory() . '/inc/archive.php';
 //ダッシュボードメニューのラベルを変更
 require get_template_directory() . '/inc/change-label.php';
 
-//ページナビゲーション
-// require get_template_directory() . '/inc/page-navigation.php';
+//書籍アフィリエイト
+require get_template_directory() . '/inc/book-affiliate.php';
