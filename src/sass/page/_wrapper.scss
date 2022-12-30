@@ -3,7 +3,6 @@
 .wrapper {
   width: 90%;
   max-width: 1100px;
-  height: 100vh;
   margin: 0 auto;
 
   @include g.mq-down(sp) {
@@ -12,13 +11,9 @@
 
   &__top {
     width: 100%;
-    height: calc(100vh - 3rem);
-    display: flex;
-    flex-direction: row;
     padding-top: 2rem;
 
     @include g.mq-down(sp) {
-      display: block;
       padding-top: 3rem;
     }
 
@@ -52,7 +47,7 @@
       }
 
       @include g.mq-down(tab) {
-        padding: 0 0 0 5%;
+        padding: 0;
       }
 
       @include g.mq-down(sp) {

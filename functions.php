@@ -45,14 +45,5 @@ require get_template_directory() . '/inc/archive.php';
 //ダッシュボードメニューのラベルを変更
 require get_template_directory() . '/inc/change-label.php';
 
-//パンくずリスト
-require get_template_directory() . '/inc/breadcrumbs.php';
-
-//アイキャッチ画像
-require get_template_directory() . '/inc/echo_thumbnail.php';
-
-//タイトル前の「：」以前を削除
-// require get_template_directory() . '/inc/change-title.php';
-
-//目次カスタマイズ
-// require get_template_directory() . '/inc/custom-easy-toc.php';
+//ページナビゲーション
+// require get_template_directory() . '/inc/page-navigation.php';
