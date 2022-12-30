@@ -32,7 +32,7 @@ get_header();
               <?php if (has_post_thumbnail()) : ?>
                 <?php the_post_thumbnail('medium'); ?>
               <?php else : ?>
-                <img src="<?php echo get_template_directory_uri(); ?>/src/img/ogp.png" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/dist/img/ogp.png" alt="">
               <?php endif; ?>
             </div>
             <h2 class="post__title"><?php the_title(); ?></h2>

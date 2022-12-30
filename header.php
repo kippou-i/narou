@@ -28,8 +28,8 @@
       <header class="wrapper__top__sub header">
         <h1 class="header__title">
           <picture>
-            <source media="(max-width: 767px)" srcset="<?php echo get_template_directory_uri(); ?>/src/img/header_title-sp.png" width="400" height="308">
-            <img src="<?php echo get_template_directory_uri(); ?>/src/img/header_title-pc.png" alt="なろう本文検索" width="614" height="476">
+            <source media="(max-width: 767px)" srcset="<?php echo get_template_directory_uri(); ?>/dist/img/header_title-sp.png" width="400" height="308">
+            <img src="<?php echo get_template_directory_uri(); ?>/dist/img/header_title-pc.png" alt="なろう本文検索" width="614" height="476">
           </picture>
         </h1>
 
