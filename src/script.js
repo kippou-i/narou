@@ -54,6 +54,20 @@ if (sessionStorage.getItem("darkMode") === "on") {
 
 
 //*------------------*
+//*  カレント表示
+//*------------------*
+
+jQuery(function ($) {
+  let url = my_path.home_url + '/recommend/';
+  let href = $(location).attr('href');
+
+  if (href.match(url)) {
+    $('.menu-item-32').addClass('current-menu-item');
+  }
+});
+
+
+//*------------------*
 //*  サーチフォーム
 //*------------------*
 

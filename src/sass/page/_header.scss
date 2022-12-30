@@ -59,7 +59,6 @@
           border-color: g.cl(bl03);
           border-radius: 10px 0 0 10px;
           @include g.fz(18);
-          transition: .5s;
 
           @include g.hover-active {
             color: g.cl(wh);
@@ -75,35 +74,35 @@
             border-radius: 5px 5px 0 0;
           }
         }
-      }
-    }
 
-    .current-menu-item {
-      a {
-        pointer-events: none;
-        color: g.cl(wh) !important;
-        border-color: g.cl(bl01);
-        background-color: g.cl(bl01);
-        position: relative;
+        &.current-menu-item {
+          a {
+            pointer-events: none;
+            color: g.cl(wh) !important;
+            border-color: g.cl(bl01);
+            background-color: g.cl(bl01);
+            position: relative;
 
-        &::after {
-          content: '';
-          width: 1rem;
-          height: 1rem;
-          background-color: g.cl(bl01);
-          border-radius: 3px;
-          position: absolute;
-          top: 50%;
-          right: -0.5rem;
-          transform: translateY(-50%) rotate(45deg);
+            &::after {
+              content: '';
+              width: 1rem;
+              height: 1rem;
+              background-color: g.cl(bl01);
+              border-radius: 3px;
+              position: absolute;
+              top: 50%;
+              right: -0.5rem;
+              transform: translateY(-50%) rotate(45deg);
 
-          @include g.mq-down(sp) {
-            top: auto;
-            bottom: -0.5rem;
-            left: 0;
-            right: 0;
-            margin: 0 auto;
-            transform: translateY(0) rotate(45deg);
+              @include g.mq-down(sp) {
+                top: auto;
+                bottom: -0.5rem;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+                transform: translateY(0) rotate(45deg);
+              }
+            }
           }
         }
       }
