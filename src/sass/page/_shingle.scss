@@ -26,7 +26,7 @@
   &__tag {
     display: flex;
     flex-wrap: wrap;
-    gap: 1em;
+    gap: .5rem;
 
     li {
       @include g.fz(14);
@@ -60,7 +60,6 @@
       @include g.mq-down(sp) {
         @include g.font(10, 15);
         padding: 2px 11px 3px;
-        margin-bottom: 14px;
       }
     }
   }

@@ -10,8 +10,10 @@
     font-weight: g.fw(b);
     margin-bottom: 3rem;
 
-    @include g.mq-down(sp) {
-      display: none;
+    &--none {
+      @include g.mq-down(sp) {
+        display: none;
+      }
     }
   }
 
@@ -57,7 +59,6 @@
       @include g.mq-down(sp) {
         @include g.font(10, 15);
         padding: 2px 11px 3px;
-        margin-bottom: 14px;
       }
     }
   }

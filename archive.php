@@ -3,7 +3,11 @@ get_header();
 ?>
 
 <div class="archive">
-  <h1 class="archive__title">おすすめ小説<?php if (is_tag()) : ?> - <?php single_cat_title(); ?><?php endif; ?></h1>
+  <?php if (is_tag()) : ?>
+    <h1 class="archive__title">おすすめ小説 - <?php single_cat_title(); ?></h1>
+  <?php else : ?>
+    <h1 class="archive__title archive__title--none">おすすめ小説</h1>
+  <?php endif; ?>
 
   <div class="archive__lead">
     当サイト管理者・いとによる、おすすめのなろう小説を紹介しています。
