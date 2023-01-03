@@ -1,0 +1,70 @@
+@use '../global' as g;
+
+.wp-block-contact-form-7-contact-form-selector {
+  p {
+    margin-bottom: 2rem;
+  }
+
+  label {
+    display: flex;
+    align-items: center;
+    @include g.fz(20);
+    font-weight: g.fw(b);
+    margin-bottom: -0.5rem;
+
+    &::before {
+      content: '';
+      width: 5px;
+      height: 1.5rem;
+      background-color: g.cl(bl01);
+      border-radius: 5px;
+      margin-right: 10px;
+    }
+
+    .required {
+      color: #fff;
+      @include g.fz(14);
+      background-color: g.cl(rd);
+      border-radius: 5px;
+      margin-left: 1rem;
+      padding: 1px .5rem;
+    }
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    padding: 0.5em;
+    border: 1px solid g.cl(bk);
+    border-radius: 5px;
+  }
+
+  input {
+    height: 40px;
+  }
+
+  textarea {
+    height: 100px;
+    resize: vertical;
+  }
+
+  .wpcf7-submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 260px;
+    height: 50px;
+    color: g.cl(wh);
+    @include g.ls(100);
+    background-color: g.cl(bk);
+    border-radius: 25px;
+    margin: 0 auto;
+    transition: .5s;
+
+    @include g.hover-active {
+      border-color: g.cl(bl01);
+      background-color: g.cl(bl01);
+    }
+  }
+}

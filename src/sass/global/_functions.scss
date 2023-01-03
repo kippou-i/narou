@@ -1,0 +1,38 @@
+@use './variables' as *;
+@use "sass:math";
+
+@function cl($key) {
+  @return map-get($cl, $key);
+}
+
+@function fw($key) {
+  @return map-get($fw, $key);
+}
+
+@function bp($key) {
+  @return map-get($breakpoints, $key);
+}
+
+@function vw($value, $base) {
+  @return math.div(round(math.div($value, $base) * 1000), 10) * 1vw;
+}
+
+@function vh($value, $base) {
+  @return math.div(round(math.div($value, $base) * 1000), 10) * 1vh;
+}
+
+@function per($value, $base) {
+  @return math.div(round(math.div($value, $base) * 100000), 1000) * 1%;
+}
+
+@function rem($value) {
+  @return math.div(round(math.div($value, 16) * 100), 100) * 1rem;
+}
+
+@function em($value, $base) {
+  @return math.div(round(math.div($value, $base) * 1000), 1000) * 1em;
+}
+
+@function div($value, $base) {
+  @return math.div($value, $base);
+}

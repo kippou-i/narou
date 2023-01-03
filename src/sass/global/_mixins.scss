@@ -1,0 +1,133 @@
+@use './variables' as *;
+@use "sass:math";
+
+@mixin mq-up($breakpoint) {
+  @media (min-width: #{map-get($breakpoints, $breakpoint)}px) {
+    @content;
+  }
+}
+
+@mixin mq-down($breakpoint) {
+  $point: map-get($breakpoints, $breakpoint);
+
+  @media (max-width: #{$point}px) {
+    @content;
+  }
+}
+
+@mixin mq-between($breakpoint1, $breakpoint2) {
+  $size1: null;
+  $size2: null;
+
+  @each $bp,
+  $size in $breakpoints {
+    @if ($bp ==$breakpoint1 ) {
+      $size1: $size;
+    }
+
+    @if ($bp ==$breakpoint2 ) {
+      $size2: $size;
+    }
+  }
+
+  @if ($size1 <=$size2 ) {
+    @media (min-width: #{map-get($breakpoints, $breakpoint1)}px) and (max-width: #{map-get($breakpoints, $breakpoint2)}px) {
+      @content;
+    }
+  }
+
+  @else {
+    @media (min-width: #{map-get($breakpoints, $breakpoint2)}px) and (max-width: #{map-get($breakpoints, $breakpoint1)}px) {
+      @content;
+    }
+  }
+}
+
+@mixin font($size: 16, $base: 16) {
+  font-size: math.div($size, 16) + rem;
+  line-height: math.div(round(math.div($base, $size) * 1000), 1000);
+}
+
+@mixin fz($value) {
+  font-size: math.div(round(math.div($value, 16)* 100), 100) + rem;
+}
+
+@mixin lh($value, $base) {
+  line-height: math.div(round(math.div($value, $base) * 1000), 1000);
+}
+
+@mixin ls($value) {
+  letter-spacing: math.div($value, 1000) + em;
+}
+
+@mixin dashed($line, $segment, $interval, $color, $direction, $repeat, $positionX, $positionY) {
+  background-size: #{$segment + $interval}px #{$line}px;
+  background-image: linear-gradient(to $direction, $color, $color #{$segment}px, transparent #{$segment}px, transparent #{$segment + $interval}px);
+  background-repeat: repeat-#{$repeat};
+  background-position: #{$positionX} #{$positionY};
+}
+
+@mixin placeholder($color) {
+  &::placeholder {
+    color: $color;
+    @content;
+  }
+
+  // IE
+  &:-ms-input-placeholder {
+    color: $color;
+    @content;
+  }
+
+  // Edge
+  &::-ms-input-placeholder {
+    color: $color;
+    @content;
+  }
+}
+
+@mixin hover($property, $default-value, $hover-value, $duration: 0.2s) {
+  #{$property}: #{$default-value};
+  transition: #{$property} #{$duration};
+
+  &:hover {
+    @include mq-up(tab) {
+      #{$property}: #{$hover-value};
+    }
+  }
+}
+
+@mixin ellipse($clamp, $font-size, $font-height) {
+  $line-height: math.div(round(math.div($font-height, $font-size) * 10), 10) * 1;
+  -webkit-line-clamp: #{$clamp};
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  height: #{$line-height * $clamp}em;
+  overflow: hidden;
+  line-height: #{$line-height};
+  text-overflow: ellipsis;
+}
+
+@mixin hover-active {
+  @media (hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+
+  @media (hover: none) {
+    &:active {
+      @content;
+    }
+  }
+}
+
+@mixin dark {
+  @media (prefers-color-scheme: dark) {
+    @content;
+  }
+
+  &.darkmode {
+    @content;
+  }
+}

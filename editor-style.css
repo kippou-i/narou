@@ -1,0 +1,133 @@
+@charset "UTF-8";
+
+:root {
+  --color-black: #192643;
+  --color-white: #fff;
+  --color-blue01: #18b7cd;
+  --color-blue02: #1b8ef3;
+  --color-blue03: #D6FAFF;
+  --color-gray: #929EB9;
+  --color-red: #da532c;
+}
+
+.has-red-color {
+  color: var(--color-red);
+  font-weight: bold;
+}
+
+em {
+  text-decoration: underline;
+  font-style: normal;
+}
+
+h2 {
+  margin-top: 2rem;
+  padding-right: 1rem;
+  padding-bottom: .5rem;
+  font-size: 20px;
+  letter-spacing: .1em;
+  font-weight: bold;
+  border-bottom: 1px solid;
+  border-image: linear-gradient(to right, var(--color-blue01) 0%, transparent 80%, transparent 100%);
+  border-image-slice: 1;
+}
+
+h3 {
+  font-size: 20px;
+  letter-spacing: .1em;
+  font-weight: bold;
+  margin-top: 2rem;
+}
+
+h3::before {
+  content: '';
+  width: .5em;
+  height: .5em;
+  transform: translateY(-.125em) rotate(45deg);
+  background-color: var(--color-blue01);
+  display: inline-block;
+  margin-right: .5em;
+}
+
+h4,
+h5,
+h6 {
+  font-size: 18px;
+  letter-spacing: .1em;
+  font-weight: bold;
+  margin-top: 2rem;
+}
+
+p {
+  font-size: 16px;
+  line-height: 2;
+  margin-top: 1rem;
+}
+
+figure {
+  margin-top: 1rem;
+}
+
+figure > img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+.has-text-color.has-my-black-color {
+  color: var(--color-black);
+}
+
+.has-text-color.has-my-white-color {
+  color: var(--color-white);
+}
+
+.has-text-color.has-my-blue-01-color {
+  color: var(--color-blue01);
+}
+
+.has-text-color.has-my-blue-02-color {
+  color: var(--color-blue02);
+}
+
+.has-text-color.has-my-blue-03-color {
+  color: var(--color-blue03);
+}
+
+.has-text-color.has-my-gray-color {
+  color: var(--color-gray);
+}
+
+.has-text-color.has-my-red-color {
+  color: var(--color-red);
+}
+
+.has-background.has-my-black-background-color {
+  background-color: var(--color-black);
+}
+
+.has-background.has-my-white-background-color {
+  background-color: var(--color-white);
+}
+
+.has-background.has-my-blue-01-background-color {
+  background-color: var(--color-blue01);
+}
+
+.has-background.has-my-blue-02-background-color {
+  background-color: var(--color-blue02);
+}
+
+.has-background.has-my-blue-03-background-color {
+  background-color: var(--color-blue03);
+}
+
+.has-background.has-my-gray-background-color {
+  background-color: var(--color-gray);
+}
+
+.has-background.has-my-rd-background-color {
+  background-color: var(--color-red);
+}
