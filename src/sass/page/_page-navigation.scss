@@ -1,0 +1,26 @@
+@use '../global' as g;
+
+.navigation {
+  text-align: center;
+  margin: 0 auto;
+
+  .nav-links {
+    .page-numbers {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 2rem;
+      height: 2rem;
+
+      &:not(:last-child) {
+        margin-right: .5rem;
+      }
+
+      &.current {
+        border-radius: 50%;
+        color: g.cl(wh);
+        background-color: g.cl(bl01);
+      }
+    }
+  }
+}

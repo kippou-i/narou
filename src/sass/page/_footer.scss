@@ -1,0 +1,66 @@
+@use '../global' as g;
+
+.footer {
+  @include g.fz(14);
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+
+  @include g.mq-down(sp) {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__attention {
+    display: none;
+    @include g.fz(10);
+    margin-bottom: 3rem;
+
+    @include g.mq-down(sp) {
+      display: block;
+    }
+  }
+
+  &__nav {
+    ul {
+      display: flex;
+
+      @include g.mq-down(sp) {
+        display: block;
+        margin-bottom: 2rem;
+      }
+
+      li {
+        padding-right: 1rem;
+
+        @include g.mq-down(sp) {
+          padding-right: 0;
+          margin-bottom: 1rem;
+        }
+
+        &:not(:last-child) {
+          &::after {
+            content: '|';
+            padding-left: 1rem;
+
+            @include g.mq-down(sp) {
+              content: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__copy {
+    width: 320px;
+    text-align: center;
+
+    @include g.mq-down(sp) {
+      width: auto;
+    }
+  }
+}
