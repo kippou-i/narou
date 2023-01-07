@@ -19,6 +19,9 @@ get_header();
         ?>
       </header>
       <main class="shingle__main">
+        <?php if (has_post_thumbnail()) : ?>
+          <?php the_post_thumbnail('medium'); ?>
+        <?php endif; ?>
         <?php the_content(); ?>
       </main>
     </article>

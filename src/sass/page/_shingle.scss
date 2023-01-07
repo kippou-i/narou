@@ -66,7 +66,7 @@
 
   &__main {
     h2 {
-      margin-top: 2rem;
+      margin-top: 3rem;
       padding-right: 1rem;
       padding-bottom: .5rem;
       @include g.fz(20);
@@ -81,7 +81,7 @@
       @include g.fz(20);
       @include g.ls(100);
       font-weight: g.fw(b);
-      margin-top: 2rem;
+      margin-top: 3rem;
 
       &::before {
         content: '';
@@ -100,7 +100,7 @@
       @include g.fz(18);
       @include g.ls(100);
       font-weight: g.fw(b);
-      margin-top: 2rem;
+      margin-top: 3rem;
     }
 
     p {
@@ -117,6 +117,30 @@
         max-height: 100%;
         object-fit: cover;
         margin: 0 auto;
+      }
+    }
+
+    .wp-block-quote {
+      color: #192643;
+      background-color: #EEFCFE;
+      margin: 2rem 1rem;
+      padding: 1.5rem 1rem;
+      border-radius: 10px;
+
+      p:first-child {
+        margin-top: 0 !important;
+      }
+
+      cite {
+        display: inline-block;
+        margin-top: 1rem;
+        font-size: 12px;
+
+        &:before {
+          content: '――';
+          margin-right: 1rem;
+          color: g.cl(gr);
+        }
       }
     }
 
