@@ -7,17 +7,18 @@ get_header();
 
 	<p class="page-post__lead">
 		小説家になろうの投稿作品から全文検索できます。<br>
-		作品Ncodeを入力することで、特定の作品に絞り込んでの検索が可能です。
+		作品Ncodeを入力することで、特定の作品に絞り込んでの検索が可能です。<br>
+		検索時、URLよりも作品Ncodeで絞り込んだ方が正確な検索結果へ近づきますが、完璧ではありません。
 	</p>
 
 	<div class="page-post__content">
-		<script async src="https://cse.google.com/cse.js?cx=3054ee35f222c31cd"></script>
+		<script async src="https://cse.google.com/cse.js?cx=571e27c2690c247a5"></script>
 		<!-- <div class="gcse-searchbox-only"></div> -->
 
 		<div id="cse-header" class="gcse-searchbox">
 			<form id="cse-search-box" class="search-form" action="https://google.com/cse" target="_blank">
 				<div class="search-form__inner">
-					<input type="hidden" name="cx" value="3054ee35f222c31cd">
+					<input type="hidden" name="cx" value="571e27c2690c247a5">
 					<input type="hidden" name="ie" value="UTF-8">
 					<label for="ncode" class="search-form__label">
 						<span>作品Ncode</span>

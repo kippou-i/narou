@@ -14,16 +14,6 @@
     text-align: center;
   }
 
-  &__attention {
-    display: none;
-    @include g.fz(10);
-    margin-bottom: 3rem;
-
-    @include g.mq-down(sp) {
-      display: block;
-    }
-  }
-
   &__nav {
     ul {
       display: flex;

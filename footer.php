@@ -8,10 +8,6 @@ get_sidebar();
 </div>
 
 <footer class="wrapper__under footer">
-  <p class="footer__attention">
-    <span class="br">※「小説家になろう」は</span><span class="br">株式会社ヒナプロジェクトの登録商標です</span>
-  </p>
-
   <nav class="footer__nav">
     <?php
     $footer__nav = array(

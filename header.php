@@ -24,7 +24,19 @@
 <body <?php body_class(); ?>>
   <?php wp_body_open(); ?>
   <div class="wrapper" ontouchstart="">
+
     <div class="wrapper__top">
+      <div class="dark-switch">
+        <p class="dark-switch__text">dark mode</p>
+        <div class="dark-switch__inner">
+          <input type="checkbox" name="dark-switch" class="dark-switch__checkbox" id="dark-switch__btn" tabindex="0">
+          <label class="dark-switch__label" for="dark-switch__btn">
+            <span class="dark-switch__label__inner"></span>
+            <span class="dark-switch__label__switch"></span>
+          </label>
+        </div>
+      </div>
+
       <header class="wrapper__top__sub header">
         <h1 class="header__title">
           <picture>
@@ -42,21 +54,6 @@
           wp_nav_menu($header__nav);
           ?>
         </nav>
-
-        <p class="header__attention">
-          <span class="br">※「小説家になろう」は</span><span class="br">株式会社ヒナプロジェクトの登録商標です</span>
-        </p>
-
-        <div class="dark-switch">
-          <p class="dark-switch__text">dark mode</p>
-          <div class="dark-switch__inner">
-            <input type="checkbox" name="dark-switch" class="dark-switch__checkbox" id="dark-switch__btn" tabindex="0">
-            <label class="dark-switch__label" for="dark-switch__btn">
-              <span class="dark-switch__label__inner"></span>
-              <span class="dark-switch__label__switch"></span>
-            </label>
-          </div>
-        </div>
       </header>
 
       <div class="wrapper__top__main">

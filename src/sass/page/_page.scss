@@ -25,6 +25,11 @@
     margin-bottom: 3rem;
   }
 
+  &__repletion {
+    color: g.cl(gy);
+    @include g.fz(12);
+  }
+
   &__content {
     h2 {
       margin-bottom: 1rem;

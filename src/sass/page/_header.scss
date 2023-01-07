@@ -108,13 +108,4 @@
       }
     }
   }
-
-  &__attention {
-    @include g.fz(10);
-    margin-bottom: 3rem;
-
-    @include g.mq-down(sp) {
-      display: none;
-    }
-  }
 }

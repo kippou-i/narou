@@ -2,7 +2,7 @@
 
 .aside {
   &__bread {
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
 
     ul {
       display: flex;
@@ -18,5 +18,10 @@
         }
       }
     }
+  }
+
+  &__attention {
+    @include g.font(12, 18);
+    margin-bottom: 2rem;
   }
 }
