@@ -83,9 +83,9 @@
     article {
       height: 100%;
       color: g.cl(bk);
-      border-style: double;
-      border-color: g.cl(bl01);
-      border-width: 3px;
+      border-style: solid;
+      border-color: #ccc;
+      border-width: 1px;
       border-radius: 10px;
       padding: 1rem;
 
@@ -100,7 +100,6 @@
       width: 100%;
       height: auto;
       margin-bottom: 1rem;
-      border-radius: 10px;
       overflow: hidden;
 
       img {
