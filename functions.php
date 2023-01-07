@@ -52,3 +52,6 @@ require get_template_directory() . '/inc/change-label.php';
 
 //書籍アフィリエイト
 require get_template_directory() . '/inc/book-affiliate.php';
+
+// [公式] EWWW Image OptimizerのPNG→JPG自動変換を無効化する
+define('EWWW_IMAGE_OPTIMIZER_DISABLE_AUTOCONVERT', true);
