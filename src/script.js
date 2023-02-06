@@ -62,7 +62,7 @@ jQuery(function ($) {
   const href = $(location).attr('href');
 
   if (href.match(url)) {
-    $('.menu-item-152').addClass('current-menu-item');
+    $('.menu-item-172').addClass('current-menu-item');
   }
 });
 
