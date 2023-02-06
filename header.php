@@ -18,6 +18,11 @@
     gtag("config", "G-RJZH22JEEY");
   </script>
 
+  <script type="text/javascript" language="javascript">
+    var vc_pid = "888738248";
+  </script>
+  <script type="text/javascript" src="//aml.valuecommerce.com/vcdal.js" async></script>
+
   <?php wp_head(); ?>
 </head>
 

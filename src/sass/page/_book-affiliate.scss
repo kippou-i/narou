@@ -55,14 +55,16 @@
   }
 
   &__title {
-    font-size: 1.2rem;
+    font-size: 1.2rem !important;
     color: g.cl(bl01);
     font-weight: bold;
+    margin-top: 0 !important;
     margin-bottom: 1rem;
   }
 
   &__description {
-    font-size: 0.8rem;
+    font-size: 0.8rem !important;
+    margin-top: 0 !important;
     margin-bottom: auto;
     align-self: stretch;
 
@@ -100,7 +102,7 @@
     transition: background-color 150ms ease;
 
     @include g.hover-active {
-      filter: brightness(1.5);
+      filter: brightness(1.2);
     }
 
     &.orange {
