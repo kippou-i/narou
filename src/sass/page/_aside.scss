@@ -25,8 +25,11 @@
     }
   }
 
+  &__pr {
+    margin-bottom: 2rem;
+  }
+
   &__attention {
     @include g.font(12, 18);
-    margin-bottom: 2rem;
   }
 }
