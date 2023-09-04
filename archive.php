@@ -9,9 +9,7 @@ get_header();
     <h1 class="archive__title archive__title--none">おすすめ小説</h1>
   <?php endif; ?>
 
-  <div class="archive__lead">
-    当サイト管理者・いとによる、おすすめのなろう小説を紹介しています。
-  </div>
+  <p class="archive__lead">おすすめのなろう小説をアフィリエイトリンク付きで紹介しています。</p>
 
   <?php if (!is_tag()) : ?>
     <ul class="archive__tags">

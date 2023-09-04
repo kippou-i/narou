@@ -19,6 +19,7 @@ get_header();
         ?>
       </header>
       <main class="shingle__main">
+        <p class="shingle__lead">おすすめのなろう小説をアフィリエイトリンク付きで紹介しています。</p>
         <?php if (has_post_thumbnail()) : ?>
           <?php the_post_thumbnail('medium'); ?>
         <?php endif; ?>
