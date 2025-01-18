@@ -10,7 +10,7 @@ get_header();
   <?php endif; ?>
 
   <div class="archive__lead">
-    当サイト管理者・いとによる、おすすめのWEB発小説を紹介しています。
+    当サイト管理者・いとによる、おすすめのなろう小説を紹介しています。
   </div>
 
   <?php if (!is_tag()) : ?>
